@@ -12,3 +12,4 @@ public class BookStats {
         return book.text.split("\\s+").length;
     }
 }
+
