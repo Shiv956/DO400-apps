@@ -20,7 +20,21 @@ pipeline{
                 sh "npm test"
             }
         }
+stage('Release') {
 
-        // Add the Release stage here
+steps {
+
+sh '''
+
+oc project saaori-greetings
+
+oc start-build greeting-console-1 --follow --wait
+
+'''
+
+}
+
+}
+        
     }
 }
